@@ -3,8 +3,13 @@
     src: url(../fonts/Druk_Wide_Medium_Cy.otf);
 }
 @font-face{
-    font-family: Druk Wide Medium Cy;
+    font-family: "Druk Wide Medium Cy";
     src: url(../fonts/Druk_Wide_Medium_italic_Cy.otf);
+    font-style: italic;
+}
+@font-face{
+    font-family: "NeueMachina";
+    src: url(../fonts/NeueMachina-Regular.otf);
     font-style: italic;
 }
 

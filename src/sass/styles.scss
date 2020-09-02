@@ -19,7 +19,7 @@
   height: 100vh;
   width: 100vw;
   top: 0;
-  img{
+  .rect{
     position: absolute;
     &:nth-child(1){
       left: 20px;
@@ -28,6 +28,13 @@
     &:nth-child(2){
       right: 20px;
       top: 20px;
+      .circle{
+        position: absolute;
+        right: 18px;
+        top: 22px;
+        width: 29px;
+        height: 29px;
+      }
     }
     &:nth-child(3){
       right: 20px;
