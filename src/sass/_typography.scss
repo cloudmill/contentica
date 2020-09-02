@@ -1,0 +1,49 @@
+/* TYPOGRAPHY
+---------------------------------------------------------------------------------------------------- */
+/* Styles
+--------------------------------------------------------- */
+.title-wrap {
+    position: relative;
+    z-index: 100;
+    //mix-blend-mode: difference;
+}
+
+.title {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 11vw;
+    line-height: 0.9;
+    color: var(--color-title);
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-family: "Druk Wide Medium Cy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 75px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+/* Split
+--------------------------------------------------------- */
+
+.split {
+    display: inline-block;
+    overflow: hidden;
+
+    &:nth-child(1) {
+        transform: translate3d(1ch, -50%, 0);
+    }
+
+    &:nth-child(2) {
+        transform: translate3d(-1ch, 50%, 0);
+    }
+}
+
+.split__text {
+    display: block;
+}
