@@ -38,6 +38,9 @@
         setTimeout(function () {
           document.querySelector(".preloader").classList.add("loaded");
           setTimeout(function () {
+            document.querySelector(".preloader").classList.add("ready");
+          }, 600);
+          setTimeout(function () {
             document.querySelector(".preloader").classList.add("hide");
           }, 1500);
         }, 2000);
@@ -62,10 +65,10 @@
             </div>
             <style>
               #secmetr {
-                font-size: 40px;
-                font-family: "NeueMachina";
+                font-size: 26px;
+                font-family:  "Druk Wide Medium Cy";
                 color: #fff;
-                width: 355px;
+                width: 310px;
               }
             </style>
             <script type="text/javascript">
@@ -100,6 +103,12 @@
           </div>
           <div class="rect">
             <img src="dist/img/rect4.svg" alt="" />
+            <div class="text-glich">
+              <span>
+                Производим, дистрибутируем, озвучиваем и субтитрируем
+                видеоконтент.
+              </span>
+            </div>
           </div>
         </div>
 
