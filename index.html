@@ -33,6 +33,16 @@
         );
     </script>
     <script src="dist/app.js"></script>
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          document.querySelector(".preloader").classList.add("loaded");
+          setTimeout(function () {
+            document.querySelector(".preloader").classList.add("hide");
+          }, 1500);
+        }, 2000);
+      };
+    </script>
   </head>
   <body>
     <main>
@@ -59,8 +69,8 @@
               }
             </style>
             <script type="text/javascript">
-            (function(){
-                var span = document.querySelectorAll('#secmetr span')
+              (function () {
+                var span = document.querySelectorAll("#secmetr span");
                 var ms = 0,
                   s = 0,
                   m = 0,
@@ -85,7 +95,7 @@
                     span[3 - key].innerHTML = val;
                   });
                 }, 10);
-            })()
+              })();
             </script>
           </div>
           <div class="rect">
@@ -103,7 +113,6 @@
                 draggable="false"
               />
               <h3>студия озвучания</h3>
-              
             </li>
             <li class="slide | js-slide">
               <img
@@ -112,7 +121,6 @@
                 draggable="false"
               />
               <h3>производство субтитров</h3>
-              
             </li>
             <li class="slide | js-slide">
               <img
@@ -121,7 +129,6 @@
                 draggable="false"
               />
               <h3>производство Программ</h3>
-              
             </li>
             <li class="slide | js-slide">
               <img
@@ -138,7 +145,6 @@
                 draggable="false"
               />
               <h3>Консульатция телеканалов</h3>
-              
             </li>
           </ol>
         </nav>
@@ -151,6 +157,11 @@
           </span>
         </div>
         <canvas id="stage"></canvas>
+      </div>
+      <div class="preloader">
+        <div class="preloader-circle"></div>
+        <div class="preloader-noise"></div>
+        <div class="preloader-layer"></div>
       </div>
     </main>
   </body>
