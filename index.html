@@ -33,19 +33,7 @@
         );
     </script>
     <script src="dist/app.js"></script>
-    <script>
-      window.onload = function () {
-        setTimeout(function () {
-          document.querySelector(".preloader").classList.add("loaded");
-          setTimeout(function () {
-            document.querySelector(".preloader").classList.add("ready");
-          }, 600);
-          setTimeout(function () {
-            document.querySelector(".preloader").classList.add("hide");
-          }, 1500);
-        }, 2000);
-      };
-    </script>
+    
   </head>
   <body>
     <main>
@@ -67,7 +55,7 @@
             <style>
               #secmetr {
                 font-size: 26px;
-                font-family:  "Druk Wide Medium Cy";
+                font-family: "Druk Wide Medium Cy";
                 color: #fff;
                 width: 310px;
                 position: absolute;
@@ -176,6 +164,80 @@
         <div class="preloader-noise"></div>
         <div class="preloader-layer"></div>
       </div>
+      <div class="modal">
+        <div class="modal-bg"></div>
+        <div class="modal-notise"></div>
+        <div class="modal-layer"></div>
+        <div class="modal-content">
+          <div class="rect"></div>
+          <div class="rect modal-close"></div>
+          <div class="rect"></div>
+          <div class="rect"></div>
+          <a href="tel:+7 495 639–99–24" class="modal-field">
+            +7 495 639–99–24
+            <span>phone</span>
+          </a>
+          <a href="mailto:info@contentica.ru" class="modal-field right small">
+            info@contentica.ru
+            <span>mail</span>
+          </a>
+          <div class="modal-field right free">
+            <span>
+              москва <br />
+              Лужнецкая набережная, <br />
+              2/4 дом 3, офис 107
+            </span>
+          </div>
+        </div>
+      </div>
     </main>
+    <script>
+      window.onload = function () {
+        setTimeout(function () {
+          document.querySelector(".preloader").classList.add("loaded");
+          setTimeout(function () {
+            document.querySelector(".preloader").classList.add("ready");
+          }, 600);
+          setTimeout(function () {
+            document.querySelector(".preloader").classList.add("hide");
+          }, 1500);
+        }, 2000);
+      };
+      let animate = false;
+      document.addEventListener(
+        "click",
+        function () {
+          if (!animate) {
+            animate = true;
+            document.querySelector(".modal").classList.add("active");
+            setTimeout(function () {
+              document.querySelector(".modal").classList.add("ready");
+            }, 650);
+            setTimeout(function () {
+              document.querySelector(".modal").classList.add("open");
+              animate = false;
+            }, 1500);
+          }
+        },
+        false
+      );
+      document.querySelector(".modal-close").addEventListener(
+        "click",
+        function () {
+          if (!animate) {
+            animate = true;
+            document.querySelector(".modal").classList.remove("open");
+            setTimeout(function () {
+              document.querySelector(".modal").classList.remove("ready");
+            }, 650);
+            setTimeout(function () {
+              document.querySelector(".modal").classList.remove("active");
+              animate = false;
+            }, 1500);
+          }
+        },
+        false
+      );
+    </script>
   </body>
 </html>
