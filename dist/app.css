@@ -751,6 +751,19 @@ body {
         left: 20px;
         bottom: 20px;
         transform: rotate(-90deg); }
+  .modal-open {
+    font-family: "Druk Wide Medium Cy";
+    top: 210px;
+    right: 20px;
+    font-style: normal;
+    font-weight: 500;
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+    font-size: 23px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #ff4848; }
   .modal-field {
     font-family: "Druk Wide Medium Cy";
     font-style: normal;
