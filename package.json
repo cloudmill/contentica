@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack --watch --config webpack.config.js"
+    "dev": "webpack --watch --config webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
